@@ -6,7 +6,7 @@ const Header = () => {
   console.log(pathname);
 
   return (
-    <div className='bg-textGray shadow-md shadow-green-200 text-textSecondary'>
+    <div className='bg-navFooterGray shadow-md shadow-green-200 text-textSecondary'>
       <div className="navbar max-w-screen-xl mx-auto">
         {/* Navbar Start */}
         <div className="navbar-start">

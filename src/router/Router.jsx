@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
         element : <MainLayout></MainLayout>,
         children: [
             {
-                paht : "/",
+                path : "/",
                 element : <HomePage></HomePage>
             },
             {
