@@ -13,6 +13,13 @@ export default {
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],
       },
+      fontSize : {
+        h1 : "40px",
+        h2 : "35px",
+        h3 : "30px",
+        h4 : "25px",
+        p : "25px"
+      }
     },
   },
   plugins: [require('daisyui')],

@@ -1,3 +1,4 @@
+import Banner from "../../components/banner/Banner"
 import Home from "../../components/home/Home"
 
 

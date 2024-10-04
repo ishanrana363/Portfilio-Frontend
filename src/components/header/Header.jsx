@@ -6,7 +6,7 @@ const Header = () => {
   console.log(pathname);
 
   return (
-    <div className='bg-navFooterGray shadow-md shadow-green-200 text-textSecondary'>
+    <div className='bg-navFooterGray shadow-md shadow-green-200 text-textSecondary sticky top-0 z-10 '>
       <div className="navbar max-w-screen-xl mx-auto">
         {/* Navbar Start */}
         <div className="navbar-start">
@@ -43,7 +43,7 @@ const Header = () => {
             <img className='w-16 h-16 rounded-full' src="https://res.cloudinary.com/dj2edy2rg/image/upload/v1727920385/portfilio/d9w0ntusvdozagdzh3j7.png" alt="Logo" />
           </NavLink>
         </div>
-        
+
         {/* Navbar Center for Large Screens */}
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -63,6 +63,7 @@ const Header = () => {
         </div>
       </div>
     </div>
+
   );
 };
 
