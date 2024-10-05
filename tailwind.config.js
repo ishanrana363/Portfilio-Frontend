@@ -7,7 +7,9 @@ export default {
     extend: {
       colors: {
         bgPrimary: '#0B192C',  
-        textSecondary: '#FF6500',
+        // textSecondary: '#FF6500',
+        
+        textSecondary: 'white',
         navFooterGray : "#1E3E62"
       },
       fontFamily: {
@@ -18,7 +20,10 @@ export default {
         h2 : "35px",
         h3 : "30px",
         h4 : "25px",
-        p : "25px"
+        p : "25px",
+        pSmallDevice : "19px",
+        h1SmallDevice : "32px",
+        h2SmallDevice : "28px",
       }
     },
   },

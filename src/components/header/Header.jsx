@@ -11,7 +11,7 @@ const Header = () => {
         {/* Navbar Start */}
         <div className="navbar-start">
           {/* Toggle Button for Small Screens */}
-          <div className="dropdown lg:hidden">
+          <div className="dropdown md:hidden">
             <label tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -39,13 +39,13 @@ const Header = () => {
             </ul>
           </div>
           {/* Logo for Large Screens */}
-          <NavLink className="hidden lg:flex" to={"/"}>
+          <NavLink className="hidden md:flex" to={"/"}>
             <img className='w-16 h-16 rounded-full' src="https://res.cloudinary.com/dj2edy2rg/image/upload/v1727920385/portfilio/d9w0ntusvdozagdzh3j7.png" alt="Logo" />
           </NavLink>
         </div>
 
         {/* Navbar Center for Large Screens */}
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden md:flex">
           <ul className="menu menu-horizontal px-1">
             <li><NavLink to={"/"}>Home</NavLink></li>
             <li><NavLink to={"/about"}>About</NavLink></li>
