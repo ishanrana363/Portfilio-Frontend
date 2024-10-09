@@ -6,7 +6,7 @@ const Header = () => {
   console.log(pathname);
 
   return (
-    <div className='bg-navFooterGray shadow-md shadow-green-200 text-textSecondary sticky top-0 z-10 '>
+    <div className='bg-navFooterGray shadow-md shadow-green-200 font-mono font-bold text-2lg text-textSecondary sticky top-0 z-10 '>
       <div className="navbar max-w-screen-xl mx-auto">
         {/* Navbar Start */}
         <div className="navbar-start">
@@ -46,8 +46,8 @@ const Header = () => {
 
         {/* Navbar Center for Large Screens */}
         <div className="navbar-center hidden md:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li><NavLink to={"/"}>Home</NavLink></li>
+          <ul className="menu menu-horizontal text-lg px-1">
+            <li><NavLink className={""}  to={"/"}>Home</NavLink></li>
             <li><NavLink to={"/about"}>About</NavLink></li>
             <li><NavLink to={"/skill"}>Skills</NavLink></li>
             <li><NavLink to={"/service"}>Services</NavLink></li>
