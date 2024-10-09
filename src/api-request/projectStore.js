@@ -12,7 +12,16 @@ const projectStore = create((set)=>({
             return false;
         }
         
-    }
+    },
+    addProjectApi : async (payload) => {
+        let res = await axios.post(`${baseUrl}/project-contact`, payload);
+        if(res.data.status ==="success"){
+            return res.data.data;
+        } else{
+            return false;
+        }
+        
+    },
 }));
 
 

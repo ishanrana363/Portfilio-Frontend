@@ -5,9 +5,9 @@ import WavyUnderline from "../wavy-nderline/WavyUnderline"
 
 const Hero = () => {
     return (
-        <div className="bg-bgPrimary font-mono " >
+        <div className="font-mono " >
             <div
-                className="hero min-h-[calc(100vh-304px)] mx-auto " // Added flex and justify-end
+                className="  mx-auto " 
                 style={{
                     backgroundImage: "url()",
                     backgroundPosition: "center",
