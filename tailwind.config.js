@@ -8,8 +8,8 @@ export default {
       colors: {
         bgPrimary: '#0B192C',  
         // textSecondary: '#FF6500',
-        
         textSecondary: 'white',
+        
         navFooterGray : "#1E3E62"
       },
       fontFamily: {
