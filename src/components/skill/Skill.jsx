@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import skillStore from '../../api-request/skillStore';
 import Loader from '../loder/Loder';
 
