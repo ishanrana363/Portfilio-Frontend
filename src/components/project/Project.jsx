@@ -29,7 +29,7 @@ const Project = () => {
                 projectDataList.map((item, i) => {
                   return (
                     <div key={i} className="flex justify-center">
-                      <div className="card bg-gray-400 shadow-xl transform transition duration-500 hover:scale-75 hover:shadow-2xl">
+                      <div className="card bg-gray-400 shadow-xl transform transition duration-500  hover:translate-x-3 hover:shadow-2xl">
                         <Link target="_blank" to={item.url} >
                           <figure className="px-10 pt-10">
                             <img
