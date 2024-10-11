@@ -16,14 +16,35 @@ export default {
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],
       },
       fontSize : {
-        h1 : "40px",
-        h2 : "35px",
-        h3 : "30px",
-        h4 : "25px",
-        p : "25px",
-        pSmallDevice : "19px",
-        h1SmallDevice : "32px",
-        h2SmallDevice : "28px",
+        // lg device
+        lgH1 : "50px",
+        lgH2 : "47px",
+        lgH3 : "44px",
+        lgH4 : "40px",
+        lgH5 : "37px",
+        lgH6 : "34px",
+        lgP : "22px",
+
+        // md device
+
+        mdH1 : "46px",
+        mdH2 : "43px",
+        mdH3 : "40px",
+        mdH4 : "36px",
+        mdH5 : "33px",
+        mdH6 : "29px",
+        mdP : "20px",
+
+        // sm device
+
+        smH1 : "35px",
+        smH2 : "33px",
+        smH3 : "30px",
+        smH4 : "26px",
+        smH5 : "22px",
+        smH6 : "20px",
+        smP : "18px"
+
       },
       animation: {
         'zoom-in': 'zoomIn 0.6s ease-in-out forwards',
