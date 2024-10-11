@@ -14,43 +14,44 @@ const Skill = () => {
     })();
   }, []);
 
-
-
   return (
     <>
-      <div className='bg-bgPrimary min-h-screen text-white  '>
-        <div className='max-w-screen-xl mx-auto py-10'>
-          <div>
-            {
-              loder ? <Loader></Loader> : (
-                <div className='grid lg:grid-cols-4 md:grid-cols-3  sm:grid-cols-2 gap-6'>
+      <div className='bg-bgPrimary min-h-screen text-white ' >
+        <div className='max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8'> {/* Responsive padding for different devices */}
+          <div className='py-10'>
+            <div>
+              {loder ? (
+                <Loader />
+              ) : (
+                <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-6'>
                   {allSkillData &&
                     allSkillData.map((item, i) => {
                       return (
                         <div key={i} className="h-full">
-                          <div className="card bg-gray-400 shadow-xl transform transition duration-500 hover:scale-75 hover:shadow-2xl">
-                            <figure className="px-10 pt-10">
+                          <div className="flex flex-col h-full bg-gray-400 shadow-xl rounded-lg transform transition hover:translate-x-4 duration-500 hover:shadow-2xl"> {/* Added rounded-lg for rounded corners */}
+                            <figure className="px-4 pt-4 md:px-6 md:pt-6 lg:px-10 lg:pt-10"> {/* Adjust padding for all devices */}
                               <img
                                 src={item?.img}
-                                className="rounded-full hover:scale-125 hover:translate-x-2 hover:duration-1000 border border-bgPrimary"
+                                className="rounded-full border border-bgPrimary mx-auto"  // Added mx-auto to center image
                                 alt="Skill Image"
-                                style={{ width: '200px', height: '200px', objectFit: 'cover' }}
+                                style={{ width: '120px', height: '120px', objectFit: 'cover' }}  // Adjust size for responsiveness
                               />
                             </figure>
-                            <div className="card-body items-center text-center">
-                              <h2 className="card-title font-serif ">{item?.name}</h2>
+                            <div className="flex-grow card-body items-center text-center">
+                              <h2 className="card-title text-lg md:text-xl font-mono lg:text-2xl"> {/* Responsive font sizes */}
+                                {item?.name}
+                              </h2>
                             </div>
                           </div>
                         </div>
                       );
                     })}
                 </div>
-              )
-            }
+              )}
+            </div>
           </div>
         </div>
       </div>
-
     </>
   );
 };

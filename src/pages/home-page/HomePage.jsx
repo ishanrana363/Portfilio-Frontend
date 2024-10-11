@@ -1,5 +1,6 @@
 import ProjectForm from "../../components/have-project/ProjectForm"
 import Home from "../../components/home/Home"
+import Skill from './../../components/skill/Skill';
 
 
 const HomePage = () => {
@@ -13,6 +14,9 @@ const HomePage = () => {
       </div>
       <div className="bg-[#54C392] py-8 font-mono " >
       <ProjectForm></ProjectForm>
+      </div>
+      <div>
+        <Skill></Skill>
       </div>
     </>
   )

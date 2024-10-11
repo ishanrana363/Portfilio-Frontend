@@ -1,26 +1,22 @@
-
-
-
 const WavyUnderline = () => {
   return (
-    <div style={{ display: 'inline-block', position: 'relative' }}>
-      {/* Motion component for animation */}
+    <div className="inline-block relative">
+      {/* Heading with responsive font size */}
       <h1
-        style={{  color: '#FF6500', fontWeight : "700", marginBottom: '10px', position: 'relative', zIndex: 1 }}
-        
-        className='lg:text-h1 text-h1SmallDevice text-center  '
+        style={{ color: '#FF6500', fontWeight: '700', position: 'relative', zIndex: 1 }}
+        className="lg:text-lgH1 md:text-4xl sm:text-3xl text-2xl text-center mb-2"
       >
         I am Ishan Rana
       </h1>
 
-      {/* SVG wavy underline */}
+      {/* Responsive SVG Wavy Underline */}
       <svg
-        viewBox="0 0 300 20" 
+        viewBox="0 0 300 20"
         xmlns="http://www.w3.org/2000/svg"
-        style={{ position: 'absolute', bottom: '-5px', left: '0', width: '300', height: '20px', zIndex: '0' }}
+        className="absolute bottom-[-5px] left-0 w-full h-[20px] md:h-[25px] lg:h-[30px] z-0"
       >
         <path
-          d="M0 10 Q 100 20, 250 10 T 500 10"  // Path for the wave effect
+          d="M0 10 Q 100 20, 250 10 T 500 10" // Path for the wave effect
           stroke="#4A00E0"
           strokeWidth="2"
           fill="transparent"

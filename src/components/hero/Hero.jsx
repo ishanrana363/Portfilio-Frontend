@@ -7,7 +7,7 @@ const Hero = () => {
     return (
         <div className="font-mono " >
             <div
-                className="  mx-auto " 
+                className="  mx-auto "
                 style={{
                     backgroundImage: "url()",
                     backgroundPosition: "center",
