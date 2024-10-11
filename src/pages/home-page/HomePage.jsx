@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import ProjectForm from "../../components/have-project/ProjectForm"
 import Home from "../../components/home/Home"
 import Skill from './../../components/skill/Skill';
@@ -6,6 +7,9 @@ import Skill from './../../components/skill/Skill';
 const HomePage = () => {
   return (
     <>
+    <Helmet>
+      <title>Home Page</title>
+    </Helmet>
       <div>
         <div className="bg-bgPrimary" >
           <Home></Home>

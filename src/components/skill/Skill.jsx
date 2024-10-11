@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import skillStore from '../../api-request/skillStore';
 import Loader from './../loder/Loder';
+import { Helmet } from 'react-helmet-async';
 
 const Skill = () => {
   const { allSkillDataApi, allSkillData } = skillStore();
   const [loder, setLoder] = useState(false);
-
+  window.scrollTo(0,0)
   useEffect(() => {
     (async () => {
       setLoder(true);
@@ -16,6 +17,9 @@ const Skill = () => {
 
   return (
     <>
+    <Helmet>
+      <title> Skill Page </title>
+    </Helmet>
       <div className='bg-bgPrimary min-h-screen text-white ' >
         <div className='max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8'> {/* Responsive padding for different devices */}
           <div className='py-10'>

@@ -4,7 +4,7 @@ import serviceStore from '../../api-request/serviceStore';
 const Service = () => {
   const [loader, setLoader] = useState(false);
   const { serviceDataListApi, serviceDataList } = serviceStore();
-
+  window.scrollTo(0, 0);
   useEffect(() => {
     (async () => {
       setLoader(true);
