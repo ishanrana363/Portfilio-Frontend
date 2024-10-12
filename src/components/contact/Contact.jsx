@@ -6,7 +6,7 @@ const Contact = () => {
     e.preventDefault();
   };
   return (
-    <div className='bg-bgPrimary'>
+    <div className='bg-bgPrimary font-mono '>
       <div className='max-w-screen-xl mx-auto text-white py-9'>
         <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-10 p-10 bg-gray-50">
           {/* Contact Info Section */}
