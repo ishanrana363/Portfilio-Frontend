@@ -32,7 +32,7 @@ const Header = () => {
             </label>
             <ul
               tabIndex={0}
-              className={`menu menu-sm dropdown-content bg-bgPrimary mt-3 z-[1] p-2 shadow rounded-box w-52 ${toggle ? "block duration-700 " : "hidden duration-700 "}`}>
+              className={`menu menu-sm dropdown-content z-50 bg-bgPrimary mt-3 z-[1] p-2 shadow rounded-box w-52 ${toggle ? "block duration-700 " : "hidden duration-700 "}`}>
               <li><NavLink to={"/"}>Home</NavLink></li>
               <li><NavLink to={"/about"}>About</NavLink></li>
               <li><NavLink to={"/skill"}>Skills</NavLink></li>
