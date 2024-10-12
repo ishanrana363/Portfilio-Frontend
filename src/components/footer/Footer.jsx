@@ -41,6 +41,9 @@ const Footer = () => {
               </ul>
             </div>
           </div>
+          <aside>
+            <p className='text-center' >Copyright © {new Date().getFullYear()} - All right reserved by Md : Ishan Rana  </p>
+          </aside>
         </footer>
       </div>
     </div>
