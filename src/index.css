@@ -19,3 +19,11 @@ body {
 .swiper-button-next {
   display: none !important; /* Use !important to override default styles */
 }
+
+.grayscale-icon {
+  filter: grayscale(100%) !important ;
+  transition: filter 0.3s ease-in-out !important ;
+}
+.grayscale-icon:hover {
+  filter: grayscale(0%) !important ;
+}
