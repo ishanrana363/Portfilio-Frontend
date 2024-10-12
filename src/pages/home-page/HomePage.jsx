@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import ProjectForm from "../../components/have-project/ProjectForm"
 import Home from "../../components/home/Home"
 import Skill from './../../components/skill/Skill';
+import FeedbackPage from "../feedback-page/FeedbackPage";
 
 
 const HomePage = () => {
@@ -21,6 +22,9 @@ const HomePage = () => {
       </div>
       <div>
         <Skill></Skill>
+      </div>
+      <div>
+        <FeedbackPage></FeedbackPage>
       </div>
     </>
   )
