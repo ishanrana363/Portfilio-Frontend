@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import feedbackStore from "../../api-request/feedbackStore";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
@@ -7,14 +7,18 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Loader from "../loder/Loder";
 
 const AllFeedback = () => {
+    const [loader,setLoader] = useState(false)
     const { feedbackListApi, feedbackList } = feedbackStore();
 
     useEffect(() => {
         const fetchFeedback = async () => {
             try {
+                setLoader(true);  // Show loader before fetching data
                 await feedbackListApi();
+                setLoader(false);  // Hide loader after fetching data
             } catch (error) {
                 console.error("Failed to fetch feedback:", error);
             }
@@ -22,8 +26,8 @@ const AllFeedback = () => {
         fetchFeedback();
     }, []);
 
-    if (!feedbackList.length) {
-        return <p className="text-center text-gray-500">No feedback available.</p>;
+    if (feedbackList.length===0) {
+        return <Loader></Loader> ;
     }
 
     return (
