@@ -27,7 +27,7 @@ const Project = () => {
         {loader ? (
           <Loader />
         ) : (
-          <div className="grid gap-10 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pb-10">
+          <div className="grid gap-10 mx-auto grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pb-10">
             {projectDataList && projectDataList.length > 0 ? (
               projectDataList.map((item, i) => (
                 <div key={i} className="flex justify-center">
@@ -37,7 +37,7 @@ const Project = () => {
                         <img
                           src={item.img}
                           alt={item?.name || "Project Image"}
-                          className="rounded-xl w-48 h-48 object-cover"
+                          className="rounded-xl w-20 h-20 md:w-48 md:h-48 object-cover"
                         />
                       </figure>
                       <div className="card-body text-center flex-grow flex flex-col justify-end pb-2">
