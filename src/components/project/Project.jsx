@@ -24,7 +24,7 @@ const Project = () => {
           {loder ? (
             <Loader />
           ) : (
-            <div className="grid lg:grid-cols-4 pb-10 md:grid-cols-3 sm:grid-cols-2 gap-8 max-w-screen-xl mx-auto">
+            <div className="grid lg:grid-cols-4 pb-10 md:grid-cols-3 flex-col lg:gap-8 md:gap-6  max-w-screen-xl mx-auto">
               {projectDataList &&
                 projectDataList.map((item, i) => {
                   return (
