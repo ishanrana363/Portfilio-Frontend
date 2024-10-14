@@ -27,7 +27,7 @@ const Project = () => {
         {loader ? (
           <Loader />
         ) : (
-          <div className="grid gap-10 mx-auto grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pb-10">
+          <div className="grid gap-5 mx-auto grid-cols-2 md:grid-cols-3 lg:grid-cols-4 pb-10">
             {projectDataList && projectDataList.length > 0 ? (
               projectDataList.map((item, i) => (
                 <div key={i} className="flex justify-center">
