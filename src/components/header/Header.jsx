@@ -62,9 +62,9 @@ const Header = () => {
         </div>
 
         {/* Navbar End */}
-        <div className="navbar-end">
+        {/* <div className="navbar-end">
           <NavLink to={"login"}>Login</NavLink>
-        </div>
+        </div> */}
       </div>
     </div>
   );
