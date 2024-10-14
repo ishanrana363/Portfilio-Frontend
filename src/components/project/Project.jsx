@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import projectStore from "../../api-request/projectStore";
 import { Link } from "react-router-dom";
 import SkeletonLoader from "../loder/SkeletonLoader";
+import { Helmet } from "react-helmet-async";
 
 const Project = () => {
   const { projectDataListApi, projectDataList } = projectStore();
@@ -21,6 +22,9 @@ const Project = () => {
   // Render the project data
   return (
     <div className="bg-bgPrimary text-white min-h-screen">
+      <Helmet>
+        <title>Project Page</title>
+      </Helmet>
       <div className="max-w-screen-xl mx-auto">
         <h1 className="text-center font-serif text-2xl py-8 text-textSecondary">
           All Projects

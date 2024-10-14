@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import serviceStore from '../../api-request/serviceStore';
 import SkeletonLoader from './../loder/SkeletonLoader';
+import { Helmet } from 'react-helmet-async';
 
 const Service = () => {
   const { serviceDataListApi, serviceDataList } = serviceStore(); 
@@ -17,6 +18,9 @@ if(serviceDataList === null || serviceDataList.length === 0){
 }
 return (
     <div className="bg-bgPrimary pb-8 ">
+      <Helmet>
+        <title>Service page</title>
+      </Helmet>
       <div className="max-w-screen-xl mx-auto">
         <h2 className="text-center lg:text-lgH2 md:text-mdH2 text-smH2 font-mono text-white py-4">
           All Services
