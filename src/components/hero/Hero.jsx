@@ -21,7 +21,7 @@ const Hero = () => {
                     <div className="max-w-md">
                         <WavyUnderline /> <br />
                         <CarvedHeading />
-                        <NavLink target="blank" to={"https://drive.google.com/file/d/1-VDO9KfC2w4AWLOcGEU42wwT7tY8nXzj/view"} ><button className="btn btn-primary my-3 text-textSecondary hover:scale-105 hover:translate-x-2 transition ">Download my cv</button></NavLink>
+                        <NavLink target="blank" to={"https://drive.google.com/file/d/1cTIJAJ3cR5Jrp2ECilHHxxvwk1lPyZ1B/view?usp=sharing"} ><button className="btn btn-primary my-3 text-textSecondary hover:scale-105 hover:translate-x-2 transition ">Download my cv</button></NavLink>
                     </div>
                 </div>
             </div>
