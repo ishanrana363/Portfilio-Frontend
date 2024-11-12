@@ -1,13 +1,20 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import logoStore from '../../api-request/logoStore';
 
 const Header = () => {
-  const { pathname } = useLocation();
   const [toggle, setToggle] = useState(false);
+  const { logoListApi, logoList } = logoStore();
 
   const handleToggle = () => {
     setToggle(!toggle);
   };
+
+  useEffect(() => {
+    (async () => {
+      await logoListApi();
+    })()
+  }, [])
 
   return (
     <div className='bg-navFooterGray shadow-md shadow-green-200 font-mono font-bold text-2xl text-textSecondary sticky top-0 z-10'>
@@ -44,7 +51,16 @@ const Header = () => {
           </div>
           {/* Logo for Large Screens */}
           <NavLink className="hidden md:flex" to={"/"}>
-            <img className='w-16 h-16 rounded-full' src="https://res.cloudinary.com/dj2edy2rg/image/upload/v1727920385/portfilio/d9w0ntusvdozagdzh3j7.png" alt="Logo" />
+            {
+              logoList.map((logo, index) => (
+                <img
+                  key={index}
+                  src={logo.logo}
+                  alt={logo.logoName}
+                  className="h-14 w-14"
+                />
+              ))
+            }
           </NavLink>
         </div>
 
