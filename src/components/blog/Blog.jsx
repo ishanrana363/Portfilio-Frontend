@@ -43,14 +43,7 @@ return (
               return (
                 <div key={i} className="transition-all transform hover:scale-105 hover:shadow-lg rounded-lg overflow-hidden">
                   <div className="relative w-full h-64 lg:h-80">
-                    <ReactPlayer
-                      url={item.url}
-                      className="w-full h-full object-cover"
-                      playing={false}
-                      light
-                      width="100%"
-                      height="100%"
-                    />
+                    
                     <button
                       onClick={() => handlePlay(item.url)}
                       className="absolute inset-0 flex justify-center items-center text-white text-3xl rounded-full"
