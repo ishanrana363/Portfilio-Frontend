@@ -58,7 +58,7 @@ const Contact = () => {
 
       <div className="bg-gradient-to-br from-teal-400 via-sky-300 via-blue-200 to-purple-500 bg-opacity-100 font-mono">
         <div className="max-w-screen-xl mx-auto text-gray-950 py-9">
-          <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-10 p-10 bg-gray-50">
+          <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-10 p-5 md:p-10 bg-gray-50">
             {/* Contact Info Section */}
             <div className="flex-1">
               <h2 className="md:text-4xl font-bold md:mb-4 text-gray-800">Get In Touch</h2>
