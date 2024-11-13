@@ -53,13 +53,13 @@ function BlogDetailsPage() {
     }
 
     return (
-        <div className="relative -z-0 ">
+        <div className="relative -z-0">
             {/* Background Gradient with Opacity */}
             <div className="absolute inset-0 bg-gradient-to-br from-teal-400 via-sky-300 via-blue-200 to-purple-500 opacity-70"></div>
 
             <div className="relative w-11/12 mx-auto z-10">
                 {/* Image Section */}
-                <div className="w-[50%] mx-auto py-8 overflow-hidden">
+                <div className=" md:w-[50%] mx-auto py-8 overflow-hidden">
                     <img
                         src={singleBlogData?.img}
                         alt=""
@@ -69,7 +69,7 @@ function BlogDetailsPage() {
 
                 <div className="py-3 md:py-8 px-2 md:px-4 lg:px-16">
                     {/* Video Section */}
-                    <div className="w-1/2 mx-auto">
+                    <div className="w-full md:w-1/2 mx-auto">
                         <div className="transform transition duration-300 ease-in-out hover:scale-110 hover:shadow-lg rounded-lg overflow-hidden">
                             <div className="relative w-full h-64 lg:h-80">
                                 <ReactPlayer
@@ -79,6 +79,7 @@ function BlogDetailsPage() {
                                     light
                                     width="100%"
                                     height="100%"
+                                    style={{ maxWidth: '100%' }}
                                 />
                                 <button
                                     onClick={() => handlePlay(singleBlogData?.url)}
@@ -117,10 +118,10 @@ function BlogDetailsPage() {
 
                 {/* Blog Description and Date */}
                 <div>
-                    <p className="mb-4 font-mono text-lg text-gray-900">
+                    <p className=" md:mb-4 font-mono text-[10px] md:text-lg text-gray-900">
                         {singleBlogData.description}
                     </p>
-                    <p className="text-end pb-4 mt-6 font-mono text-lg text-gray-900">
+                    <p className="text-end pb-4 mt-3 md:mt-6 font-mono text-[10px] md:text-lg text-gray-900">
                         {moment(singleBlogData.createdAt).format('MMMM Do YYYY, h:mm:ss a')}
                     </p>
                 </div>
