@@ -1,9 +1,14 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async';
 
 const Intellectual = () => {
+    window.scrollTo(0, 0);
     return (
         <div>
-            <div className='bg-bgPrimary overflow-hidden'>
+            <Helmet>
+                <title>Intellectual Property</title>
+            </Helmet>
+            <div className='bg-gradient-to-br from-teal-400 via-sky-300 via-blue-200 to-purple-500 bg-opacity-100 overflow-hidden'>
                 <div className='max-w-screen-xl mx-auto overflow-hidden'>
                     <div className='flex text-white font-mono justify-between items-center overflow-hidden'>
                         <h1 className='md:py-16 px-4 lg:text-lg'>

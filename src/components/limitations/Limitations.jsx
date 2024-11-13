@@ -1,8 +1,13 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
 const Limitations = () => {
+    window.scrollTo(0, 0);
     return (
         <div>
+            <Helmet>
+                <title>Limitations - Portfolio</title>
+            </Helmet>
             <div className='bg-bgPrimary overflow-hidden'>
                 <div className='max-w-screen-xl mx-auto overflow-hidden'>
                     <div className='flex text-white font-mono justify-between items-center overflow-hidden'>

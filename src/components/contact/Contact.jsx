@@ -5,6 +5,7 @@ import { emailAlert } from '../../helper/emailAlert';
 import toast from 'react-hot-toast';
 import Swal from 'sweetalert2';
 import Loader from '../loder/Loder';
+import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
   window.scrollTo(0, 0);
@@ -49,6 +50,9 @@ const Contact = () => {
 
   return (
     <>
+    <Helmet>
+      <title> Portfilio || Contact Page </title>
+    </Helmet>
       {/* Loader Display */}
       {loader && (
         <div className="">

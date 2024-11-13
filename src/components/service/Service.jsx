@@ -19,7 +19,7 @@ if(serviceDataList === null || serviceDataList.length === 0){
 return (
     <div className="bg-gradient-to-br from-teal-400 via-sky-300 via-blue-200 to-purple-500 bg-opacity-100 pb-4 md:pb-8 ">
       <Helmet>
-        <title>Service page</title>
+        <title>Portfolio || Service page</title>
       </Helmet>
       <div className="max-w-screen-xl mx-auto">
         <h2 className="text-center md:text-4xl font-mono text-gray-900 py-1 md:py-4">

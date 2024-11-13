@@ -23,7 +23,7 @@ const Project = () => {
   return (
     <div className="bg-gradient-to-br from-teal-400 via-sky-300 via-blue-200 to-purple-500 bg-opacity-100 text-white min-h-screen">
       <Helmet>
-        <title>Project Page</title>
+        <title>Portfilio || Project Page</title>
       </Helmet>
       <div className="max-w-screen-xl mx-auto">
         <h1 className="text-center font-serif md:text-4xl py-3 md:py-8 text-gray-900 ">

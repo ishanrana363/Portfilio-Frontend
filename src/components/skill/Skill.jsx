@@ -19,7 +19,7 @@ const Skill = () => {
   return (
     <>
       <Helmet>
-        <title>Skill Page</title>
+        <title>Portfolio || Skill Page</title>
       </Helmet>
       <div className="bg-gradient-to-br from-emerald-500 via-teal-400 via-cyan-300 shadow-md  to-blue-500 min-h-screen text-gray-900 ">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
