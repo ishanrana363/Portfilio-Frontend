@@ -31,10 +31,10 @@ const AllFeedback = () => {
     }
 
     return (
-        <div className=" bg-bgPrimary " >
+        <div className=" bg-gradient-to-br from-teal-400 via-sky-300 via-blue-200 to-purple-500 bg-opacity-100" >
             <div className=" max-w-screen-xl mx-auto  " >
             <div className="">
-            <h3 className="text-center text-white font-mono md:text-3xl font-bold mb-6">All Feedback</h3>
+            <h3 className="text-center text-gray-900 font-mono md:text-4xl py-4 md:py-10 font-bold md:mb-6">All Feedback</h3>
             <Swiper
                 spaceBetween={20}
                 slidesPerView={1}
@@ -48,7 +48,7 @@ const AllFeedback = () => {
                 {feedbackList.map((fb) => (
                     <SwiperSlide
                         key={fb.id}
-                        className="flex flex-col items-center justify-center p-4 h-[300px]" // Fixed height for uniformity
+                        className="flex flex-col items-center justify-center md:p-4 h-[300px]" // Fixed height for uniformity
                     >
                         <img
                             src={fb.img}
@@ -56,8 +56,8 @@ const AllFeedback = () => {
                             className="mx-auto w-24 h-24 rounded-full object-cover" // Set fixed width and height
                         />
                         <div className="my-4 text-center">
-                            <p className="font-bold text-white text-[10px] md:text-xl">{fb.name}</p>
-                            <p className="text-white md:text-lg text-[8px] ">{fb.feedback}</p>
+                            <p className="font-bold text-gray-900 text-[10px] md:text-xl">{fb.name}</p>
+                            <p className="text-gray-900 md:text-lg text-[8px] ">{fb.feedback}</p>
                         </div>
                     </SwiperSlide>
                 ))}

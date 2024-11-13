@@ -30,7 +30,7 @@ const ProjectForm = () => {
 
     }
     return (
-        <div className='bg-navFooterGray' >
+        <div className='bg-gradient-to-br from-teal-400 via-sky-300 via-blue-200 to-purple-500 bg-opacity-100' >
             <div className='max-w-screen-xl mx-auto px-4'>
                 <h1 className="text-2xl text-white font-semibold text-center mb-6">Submit Your Project</h1>
                 <div className='flex flex-col lg:flex-row items-center'>
@@ -40,7 +40,7 @@ const ProjectForm = () => {
                             <form onSubmit={handleSubmit} >
                                 <div className='grid md:grid-cols-2 lg:gap-4 ' >
                                     <div className="mb-4">
-                                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+                                        <label className="block text-gray-900 text-sm font-bold mb-2" htmlFor="name">
                                             Name
                                         </label>
                                         <input
@@ -54,7 +54,7 @@ const ProjectForm = () => {
                                     </div>
 
                                     <div className="mb-4">
-                                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                                        <label className="block text-gray-900 text-sm font-bold mb-2" htmlFor="email">
                                             Email
                                         </label>
                                         <input
@@ -69,7 +69,7 @@ const ProjectForm = () => {
                                 </div>
 
                                 <div className="mb-4">
-                                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="description">
+                                    <label className="block text-gray-900 text-sm font-bold mb-2" htmlFor="description">
                                         Description
                                     </label>
                                     <textarea
@@ -83,7 +83,7 @@ const ProjectForm = () => {
                                 </div>
 
                                 <div className="mb-4">
-                                    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="project_link">
+                                    <label className="block text-gray-900 text-sm font-bold mb-2" htmlFor="project_link">
                                         Project Link
                                     </label>
                                     <input
