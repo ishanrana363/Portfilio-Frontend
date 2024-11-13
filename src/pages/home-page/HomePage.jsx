@@ -18,7 +18,7 @@ const HomePage = () => {
 
         </div>
       </div>
-      <div className="bg-[#54C392] py-8 font-mono " >
+      <div className=" bg-bgPrimary py-8 font-mono " >
         <ProjectForm></ProjectForm>
       </div>
       <div>

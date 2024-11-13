@@ -17,10 +17,10 @@ const Footer = () => {
             <div>
               <h1 className='md:text-2xl text-xl'  >Services</h1>
               <ul className='my-4' >
-                <li> <NavLink to={""}>Web Design</NavLink> </li>
-                <li> <NavLink to={""}>Web Development</NavLink> </li>
-                <li> <NavLink to={""}>E-Commerce Solution</NavLink> </li>
-                <li> <NavLink to={""}>Backend Development</NavLink> </li>
+                <li> <NavLink to={"/web-design"}>Web Design</NavLink> </li>
+                <li> <NavLink to={"/web-development"}>Web Development</NavLink> </li>
+                <li> <NavLink to={"/e-commerce"}>E-Commerce Solution</NavLink> </li>
+                <li> <NavLink to={"/backend-development"}>Backend Development</NavLink> </li>
               </ul>
             </div>
             <div>

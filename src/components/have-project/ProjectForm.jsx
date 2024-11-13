@@ -30,7 +30,7 @@ const ProjectForm = () => {
 
     }
     return (
-        <>
+        <div className='bg-navFooterGray' >
             <div className='max-w-screen-xl mx-auto px-4'>
                 <h1 className="text-2xl text-white font-semibold text-center mb-6">Submit Your Project</h1>
                 <div className='flex flex-col lg:flex-row items-center'>
@@ -126,7 +126,7 @@ const ProjectForm = () => {
                 )
             }
             <Toaster position='top-center' ></Toaster>
-        </>
+        </div>
     );
 };
 

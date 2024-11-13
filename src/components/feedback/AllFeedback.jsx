@@ -31,8 +31,10 @@ const AllFeedback = () => {
     }
 
     return (
-        <div className="my-8">
-            <h3 className="text-center text-2xl font-bold mb-6">All Feedback</h3>
+        <div className=" bg-bgPrimary " >
+            <div className=" max-w-screen-xl mx-auto  " >
+            <div className="">
+            <h3 className="text-center text-white font-mono md:text-3xl font-bold mb-6">All Feedback</h3>
             <Swiper
                 spaceBetween={20}
                 slidesPerView={1}
@@ -54,12 +56,14 @@ const AllFeedback = () => {
                             className="mx-auto w-24 h-24 rounded-full object-cover" // Set fixed width and height
                         />
                         <div className="my-4 text-center">
-                            <p className="font-bold text-lg">{fb.name}</p>
-                            <p className="text-gray-600">{fb.feedback}</p>
+                            <p className="font-bold text-white text-[10px] md:text-xl">{fb.name}</p>
+                            <p className="text-white md:text-lg text-[8px] ">{fb.feedback}</p>
                         </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
+        </div>
+        </div>
         </div>
     );
 };

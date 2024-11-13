@@ -11,6 +11,10 @@ import DisclaimerPage from "../pages/disclaimer-page/DisclaimerPage";
 import IntellectualPage from "../pages/intellectual-page/IntellectualPage";
 import DataPrivacyPage from "../pages/data-privacy-page/DataPrivacyPage";
 import LimitationsPage from "../pages/limitations-page/LimitationsPage";
+import WebDesign from "../pages/web-design-page/WebDesign";
+import WebDevelopment from "../pages/web-design-page/WebDevelopment";
+import ECommerce from "../pages/web-design-page/ECommerce";
+import BackendDevelopment from "../pages/web-design-page/BackendDevelopment";
 
 export const router = createBrowserRouter([
     {
@@ -60,8 +64,24 @@ export const router = createBrowserRouter([
             {
                 path : "/limatation",
                 element : <LimitationsPage></LimitationsPage>
-
+            },
+            {
+                path : "/web-design",
+                element : <WebDesign></WebDesign>
+            },
+            {
+                path :"/web-development",
+                element : <WebDevelopment></WebDevelopment>
+            },
+            {
+                path : "/e-commerce",
+                element : <ECommerce></ECommerce>
+            },
+            {
+                path : "/backend-development",
+                element : <BackendDevelopment></BackendDevelopment>
             }
+
         ]
     }
 ]);

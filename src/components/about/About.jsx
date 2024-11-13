@@ -1,4 +1,5 @@
 const About = () => {
+  window.scrollTo(0, 0);
   return (
     <div className="bg-bgPrimary">
       <div className="max-w-screen-xl mx-auto min-h-[calc(100vh-318px)] flex items-center p-4 ">
