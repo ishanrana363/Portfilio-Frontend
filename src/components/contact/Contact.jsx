@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 import Loader from '../loder/Loder';
 
 const Contact = () => {
+  window.scrollTo(0, 0);
   const { sendEmailApi } = emailStore();
   const [loader, setLoader] = useState(false);
 

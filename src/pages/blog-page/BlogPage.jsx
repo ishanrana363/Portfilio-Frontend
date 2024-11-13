@@ -44,7 +44,7 @@ const BlogPage = () => {
                       <div>
                         <div className='ml-4 mt-4 ' >
                           <h2 className="text-xl font-bold text-gray-900">{item.name}</h2>
-                          <p className="text-sm font-mono text-gray-600">
+                          <p className="text-sm font-mono text-gray-900">
                             {
                               moment(item.createdAt).format('MMMM Do YYYY, h:mm:ss a')
                             }

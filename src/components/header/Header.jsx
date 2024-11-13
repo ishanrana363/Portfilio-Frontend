@@ -17,7 +17,7 @@ const Header = () => {
   }, [])
 
   return (
-    <div className='bg-navFooterGray shadow-md shadow-green-200 font-mono font-bold text-2xl text-textSecondary sticky top-0 z-10'>
+    <div className='bg-gradient-to-br from-emerald-500 via-teal-400 via-cyan-300 to-blue-500shadow-md shadow-green-200 font-mono font-bold text-2xl text-textSecondary sticky top-0 z-10'>
       <div className="navbar max-w-screen-xl mx-auto">
         {/* Navbar Start */}
         <div className="navbar-start">
