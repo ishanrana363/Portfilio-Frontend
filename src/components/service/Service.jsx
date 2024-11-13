@@ -17,19 +17,19 @@ if(serviceDataList === null || serviceDataList.length === 0){
   return <SkeletonLoader />;
 }
 return (
-    <div className="bg-bgPrimary pb-8 ">
+    <div className="bg-gradient-to-br from-teal-400 via-sky-300 via-blue-200 to-purple-500 bg-opacity-100 pb-4 md:pb-8 ">
       <Helmet>
         <title>Service page</title>
       </Helmet>
       <div className="max-w-screen-xl mx-auto">
-        <h2 className="text-center lg:text-lgH2 md:text-mdH2 text-smH2 font-mono text-white py-4">
+        <h2 className="text-center md:text-4xl font-mono text-gray-900 py-1 md:py-4">
           All Services
         </h2>
-        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 lg:gap-7 md:gap-4 gap-8">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 lg:gap-7 md:gap-4 ">
           {serviceDataList.map((item, i) => (
-            <div key={i} className="w-11/12 mx-auto">
+            <div key={i} className="w-11/12 mt-3 md:mt-0 mx-auto">
               <div className="card bg-gray-400 shadow-xl transform transition duration-500 hover:translate-x-3 hover:shadow-2xl h-full flex flex-col justify-between">
-                <div className="px-10 py-10 flex-grow flex flex-col items-center">
+                <div className="md:px-10 pb-2 px-2 text-[9px] md:py-10 flex-grow flex flex-col items-center">
                   <img
                     className="w-24 h-24 rounded-full"
                     src={item.img}

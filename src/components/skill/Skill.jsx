@@ -21,10 +21,10 @@ const Skill = () => {
       <Helmet>
         <title>Skill Page</title>
       </Helmet>
-      <div className="bg-bgPrimary min-h-screen text-white">
+      <div className="bg-gradient-to-br from-emerald-500 via-teal-400 via-cyan-300 shadow-md  to-blue-500 min-h-screen text-gray-900 ">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Responsive padding */}
-          <div className="py-10">
+          <div className=" py-5 md:py-10">
             <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-6">
               {allSkillData.map((item, i) => (
                 <div key={i} className="h-full">
@@ -39,7 +39,7 @@ const Skill = () => {
                       />
                     </figure>
                     <div className="flex-grow card-body items-center text-center">
-                      <h2 className="card-title text-lg md:text-xl font-mono lg:text-2xl">
+                      <h2 className="card-title  md:text-xl text-[12px] font-mono ">
                         {item?.name}
                       </h2>
                     </div>
