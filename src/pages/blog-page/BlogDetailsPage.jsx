@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FaPlay, FaTimes } from 'react-icons/fa';
 import ReactPlayer from 'react-player';
 import blogStore from '../../api-request/blogStore';
-import BrandsSkeleton from '../skeleton/brands-skeleton';
-
+import { useParams } from 'react-router-dom';
 
 function BlogDetailsPage() {
     const { blogListApi, blogList } = blogStore();
@@ -17,6 +16,22 @@ function BlogDetailsPage() {
         // eslint-disable-next-line
     }, []);
 
+    useEffect(() => {
+        const handleOutsideClick = (e) => {
+            if (e.target === e.currentTarget) {
+                handleCloseModal();
+            }
+        };
+
+        if (showModal) {
+            window.addEventListener('click', handleOutsideClick);
+        }
+
+        return () => {
+            window.removeEventListener('click', handleOutsideClick);
+        };
+    }, [showModal]);
+
     const handlePlay = (videoUrl) => {
         setCurrentVideo(videoUrl);
         setShowModal(true);
@@ -27,24 +42,22 @@ function BlogDetailsPage() {
         setCurrentVideo(null);
     };
 
-    if (blogList.length === 0) {
-        return <div> <BrandsSkeleton />  </div>;
-    }
+    const { id } = useParams();
+
+    const singleBlogData = blogList.find(blog => blog._id===id);
+
+    console.log(singleBlogData?.url)
 
     return (
         <div className="w-11/12 mx-auto">
-            <div className="lg:ml-[60px] ml-3 text-[#21c45e] font-bold">
-            </div>
+            <div className="lg:ml-[60px] ml-3 text-[#21c45e] font-bold"></div>
             <div className="py-3 md:py-8 px-2 md:px-4 lg:px-16 bg-white">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {/* Video Section */}
-                    {
-                        blogList.map((item, i) => {
-                            return (
-                                <div key={i} className="transition-all transform hover:scale-105 hover:shadow-lg rounded-lg overflow-hidden">
+                                <div  className="transition-all transform hover:scale-105 hover:shadow-lg rounded-lg overflow-hidden">
                                     <div className="relative w-full h-64 lg:h-80">
                                         <ReactPlayer
-                                            url={item.url}
+                                            url={singleBlogData?.url}
                                             className="w-full h-full object-cover"
                                             playing={false}
                                             light
@@ -52,19 +65,16 @@ function BlogDetailsPage() {
                                             height="100%"
                                         />
                                         <button
-                                            onClick={() => handlePlay(item.url)}
+                                            onClick={() => handlePlay(singleBlogData?.url)}
                                             className="absolute inset-0 flex justify-center items-center text-white text-3xl rounded-full"
                                         >
                                             <FaPlay className="bg-white text-red-600 p-2 rounded-full w-12 h-12" />
                                         </button>
                                     </div>
                                     <div className="lg:mt-4 mt-3 p-4">
-
+                                        {/* Add additional content if needed */}
                                     </div>
                                 </div>
-                            );
-                        })
-                    }
                 </div>
             </div>
 
