@@ -6,7 +6,7 @@ const CarvedHeading = () => {
     <div style={{ position: 'relative', display: 'inline-block' }}>
       {/* Motion component for animation */}
       <h2
-        className="lg:text-lgH3 text-h2SmallDevice md:text-center text-center  font-bold text-textSecondary relative z-10"
+        className="font-mono md:text-4xl mb-2 mt-2  "
               // Adjust the duration of the animation
       >
         I am MERN Stack Web Developer

@@ -8,6 +8,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Loader from "../loder/Loder";
+import { TbBrandSketch } from "react-icons/tb";
+import BrandsSkeleton from "../skeleton/brands-skeleton";
 
 const AllFeedback = () => {
     const [loader,setLoader] = useState(false)
@@ -27,7 +29,7 @@ const AllFeedback = () => {
     }, []);
 
     if (feedbackList.length===0) {
-        return <Loader></Loader> ;
+        return <BrandsSkeleton></BrandsSkeleton>  ;
     }
 
     return (

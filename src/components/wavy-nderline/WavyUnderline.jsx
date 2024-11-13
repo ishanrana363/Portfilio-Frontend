@@ -4,7 +4,7 @@ const WavyUnderline = () => {
       {/* Heading with responsive font size */}
       <h1
         style={{ color: '#FF6500', fontWeight: '700', position: 'relative', zIndex: 1 }}
-        className="lg:text-lgH1 md:text-4xl sm:text-3xl text-2xl text-center mb-2"
+        className=" md:text-4xl text-center mb-2  "
       >
         I am Ishan Rana
       </h1>
