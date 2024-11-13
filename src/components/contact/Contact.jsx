@@ -56,13 +56,13 @@ const Contact = () => {
         </div>
       )}
 
-      <div className="bg-bgPrimary font-mono">
-        <div className="max-w-screen-xl mx-auto text-white py-9">
+      <div className="bg-gradient-to-br from-teal-400 via-sky-300 via-blue-200 to-purple-500 bg-opacity-100 font-mono">
+        <div className="max-w-screen-xl mx-auto text-gray-950 py-9">
           <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-10 p-10 bg-gray-50">
             {/* Contact Info Section */}
             <div className="flex-1">
-              <h2 className="text-3xl font-bold mb-4 text-gray-800">Get In Touch</h2>
-              <p className="text-gray-600 mb-6">
+              <h2 className="md:text-4xl font-bold md:mb-4 text-gray-800">Get In Touch</h2>
+              <p className="text-gray-950 mb-2 md:text-[16px] text-[10px] md:mb-6">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
               </p>
 
@@ -80,7 +80,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">Phone</h4>
-                    <p className="text-gray-600">01751586238</p>
+                    <p className="text-gray-900">01751586238</p>
                   </div>
                 </div>
 
@@ -96,7 +96,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">Email</h4>
-                    <p className="text-gray-600">ishanrana094@gmail.com</p>
+                    <p className="text-gray-900">ishanrana094@gmail.com</p>
                   </div>
                 </div>
 
@@ -112,7 +112,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">Address</h4>
-                    <p className="text-gray-600">Dinajpur, Birol</p>
+                    <p className="text-gray-900">Dinajpur, Birol</p>
                   </div>
                 </div>
               </div>
@@ -155,7 +155,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-900 text-white py-3 rounded-md hover:bg-blue-700 transition"
+                  className="w-full bg-blue-900 text-white md:text-[16px] text-[10px] py-2 md:py-3 rounded-md hover:bg-blue-700 transition"
                 >
                   SUBMIT
                 </button>
