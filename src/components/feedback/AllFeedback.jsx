@@ -33,7 +33,7 @@ const AllFeedback = () => {
     }
 
     return (
-        <div className=" bg-gradient-to-br from-teal-400 via-sky-300 via-blue-200 to-purple-500 bg-opacity-100" >
+        <div className=" " >
             <div className=" max-w-screen-xl mx-auto  " >
             <div className="">
             <h3 className="text-center text-gray-900 font-mono md:text-4xl py-4 md:py-10 font-bold md:mb-6">All Feedback</h3>

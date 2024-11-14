@@ -5,7 +5,7 @@ import WavyUnderline from "../wavy-nderline/WavyUnderline"
 
 const Hero = () => {
     return (
-        <div className="font-mono " >
+        <div className="font-mono bg-gradient-to-br from-teal-400 via-sky-300 via-blue-200 to-purple-500 bg-opacity-100 " >
             <div
                 className="  mx-auto "
                 style={{

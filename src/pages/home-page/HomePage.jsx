@@ -8,17 +8,17 @@ import ProjectPage from './../project-page/ProjectPage';
 
 const HomePage = () => {
   return (
-    <>
+    <div className="bg-gradient-to-br from-teal-400 via-sky-300 via-blue-200 to-purple-500 bg-opacity-100" >
       <Helmet>
         <title>Home Page</title>
       </Helmet>
       <div>
-        <div className="bg-bgPrimary" >
+        <div className="" >
           <Home></Home>
 
         </div>
       </div>
-      <div className=" bg-bgPrimary py-8 font-mono " >
+      <div className=" font-mono " >
         <ProjectForm></ProjectForm>
       </div>
       <div>
@@ -30,7 +30,7 @@ const HomePage = () => {
       <div>
         <FeedbackPage></FeedbackPage>
       </div>
-    </>
+    </div>
   )
 }
 

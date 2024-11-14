@@ -21,7 +21,7 @@ const Project = () => {
 
   // Render the project data
   return (
-    <div className="bg-gradient-to-br from-teal-400 via-sky-300 via-blue-200 to-purple-500 bg-opacity-100 text-white min-h-screen">
+    <div className=" text-white min-h-screen">
       <Helmet>
         <title>Portfilio || Project Page</title>
       </Helmet>

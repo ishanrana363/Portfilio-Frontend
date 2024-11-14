@@ -32,11 +32,11 @@ const ProjectForm = () => {
     return (
         <div className='bg-gradient-to-br from-teal-400 via-sky-300 via-blue-200 to-purple-500 bg-opacity-100' >
             <div className='max-w-screen-xl mx-auto px-4'>
-                <h1 className="text-2xl text-white font-semibold text-center mb-6">Submit Your Project</h1>
+                <h1 className="text-2xl text-gray-900 font-semibold text-center mb-6">Submit Your Project</h1>
                 <div className='flex flex-col lg:flex-row items-center'>
                     {/* Form Section */}
                     <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
-                        <div className="bg-gray-100 p-8 rounded-lg shadow-lg">
+                        <div className="p-8 rounded-lg shadow-lg">
                             <form onSubmit={handleSubmit} >
                                 <div className='grid md:grid-cols-2 lg:gap-4 ' >
                                     <div className="mb-4">
@@ -99,7 +99,7 @@ const ProjectForm = () => {
                                 <div className="text-center">
                                     <button
                                         type="submit"
-                                        className="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                                        className="bg-teal-500 text-gray-900 px-4 py-2 rounded hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500"
                                     >
                                         Submit
                                     </button>
