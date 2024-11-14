@@ -17,7 +17,7 @@ const Header = () => {
   }, [])
 
   return (
-    <div className='bg-gradient-to-br from-emerald-500 via-teal-400 via-cyan-300 to-blue-500shadow-md shadow-green-200 font-mono font-bold text-2xl text-textSecondary sticky top-0 z-10'>
+    <div className='bg-gradient-to-br from-emerald-500 border via-teal-400 via-cyan-300 to-blue-500shadow-md shadow-green-200 font-mono font-bold text-2xl text-textSecondary sticky top-0 z-10'>
       <div className="navbar max-w-screen-xl mx-auto">
         {/* Navbar Start */}
         <div className="navbar-start">
@@ -47,6 +47,7 @@ const Header = () => {
               <li><NavLink to={"/project"}>Projects</NavLink></li>
               <li><NavLink to={"/blog"}>Blog</NavLink></li>
               <li><NavLink to={"/contact"}>Contact</NavLink></li>
+              <li><NavLink to={"/stack-overflow"}>Stack Overflow </NavLink></li>
             </ul>
           </div>
           {/* Logo for Large Screens */}
@@ -74,6 +75,7 @@ const Header = () => {
             <li><NavLink to={"/project"}>Projects</NavLink></li>
             <li><NavLink to={"/blog"}>Blog</NavLink></li>
             <li><NavLink to={"/contact"}>Contact</NavLink></li>
+            <li><NavLink to={"/stack-overflow"}>Stack Overflow </NavLink></li>
           </ul>
         </div>
 

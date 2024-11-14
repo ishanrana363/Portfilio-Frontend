@@ -9,6 +9,7 @@ function Blog() {
   const { blogListApi, blogList } = blogStore();
   const [showModal, setShowModal] = useState(false);
   const [currentVideo, setCurrentVideo] = useState(null);
+  window.scrollTo(0, 0);
 
   useEffect(() => {
     (async () => {

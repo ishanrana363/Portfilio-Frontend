@@ -16,6 +16,7 @@ import WebDevelopment from "../pages/web-design-page/WebDevelopment";
 import ECommerce from "../pages/web-design-page/ECommerce";
 import BackendDevelopment from "../pages/web-design-page/BackendDevelopment";
 import BlogDetailsPage from "../pages/blog-page/BlogDetailsPage";
+import StackOverFlow from "../pages/stack-over-page/StackOverFlow";
 
 export const router = createBrowserRouter([
     {
@@ -85,6 +86,10 @@ export const router = createBrowserRouter([
             {
                 path : "/blog-details/:id",
                 element : <BlogDetailsPage></BlogDetailsPage> // Replace "id" with the actual blog post ID
+            },
+            {
+                path : "/stack-overflow",
+                element : <StackOverFlow></StackOverFlow> // Replace "StackOverflowPage" with the actual page component for Stack Overflow
             }
 
         ]
