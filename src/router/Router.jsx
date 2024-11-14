@@ -17,6 +17,7 @@ import ECommerce from "../pages/web-design-page/ECommerce";
 import BackendDevelopment from "../pages/web-design-page/BackendDevelopment";
 import BlogDetailsPage from "../pages/blog-page/BlogDetailsPage";
 import StackOverFlow from "../pages/stack-over-page/StackOverFlow";
+import StackDetails from "../pages/stack-over-page/StackDetails";
 
 export const router = createBrowserRouter([
     {
@@ -90,6 +91,10 @@ export const router = createBrowserRouter([
             {
                 path : "/stack-overflow",
                 element : <StackOverFlow></StackOverFlow> // Replace "StackOverflowPage" with the actual page component for Stack Overflow
+            },
+            {
+                path : "/stack-details/:id",
+                element : <StackDetails></StackDetails>
             }
 
         ]

@@ -46,10 +46,10 @@ function StackOverFlow() {
             </Helmet>
             <div className='bg-gradient-to-br from-teal-400 via-sky-300 via-blue-200 to-purple-500 opacity-70 ' >
                 <div className="w-11/12 mx-auto">
-                    <div className="lg:ml-[60px] ml-3 text-[#21c45e] font-bold">
-                        <div className="flex justify-end items-center space-x-4">
-                            <div className="w-1/4">
-                                <label className="block text-sm font-medium mb-1"></label>
+                    <div className="lg:ml-[60px] ml-3  font-bold">
+                        <div className="md:flex md:justify-end md:items-center md:space-x-4">
+                            <div className="md:w-1/4 w-full py-4 ">
+                                <label className="block text-sm font-medium "></label>
                                 <input
                                     onChange={handleSubmit}
                                     type="text"
@@ -61,7 +61,7 @@ function StackOverFlow() {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-10 ">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-4 py-3 md:py-10 ">
                         {
                             overflowList && overflowList.map((item, i) => {
                                 return (

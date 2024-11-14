@@ -13,6 +13,15 @@ const stockStore = create((set)=>({
         } else{
             return false;
         }
+    },
+    stockListById: [],
+    stockListByIdApi : async (id)=>{
+        let res = await axios.get(`${baseUrl}/single-stack/${id}`);
+        if(res.data.status ==="success"){
+            set({stockListById : res.data.data});
+        }else{
+            return false;
+        }
     }
 }));
 
