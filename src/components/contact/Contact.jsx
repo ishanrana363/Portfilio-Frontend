@@ -113,7 +113,7 @@ const Contact = () => {
                         alt=""
                         width={24}
                         height={24}
-                        className="grayscale-icon"
+                        className="grayscale-icon "
                       />
                     </div>
                     <div>
