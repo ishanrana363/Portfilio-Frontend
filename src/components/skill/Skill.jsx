@@ -21,7 +21,7 @@ const Skill = () => {
       <Helmet>
         <title>Portfolio || Skill Page</title>
       </Helmet>
-      <div className=" min-h-screen text-gray-900 ">
+      <div className="bg-gradient-to-br from-teal-400 via-sky-300 via-blue-200 to-purple-500 bg-opacity-100 min-h-screen text-gray-900 ">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Responsive padding */}
           <div className=" py-5 md:py-10">

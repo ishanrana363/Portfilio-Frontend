@@ -97,7 +97,7 @@ function BlogDetailsPage() {
                             <div className="relative w-full h-full lg:w-3/4 lg:h-3/4 max-w-screen-xl max-h-screen-xl">
                                 <button
                                     onClick={handleCloseModal}
-                                    className="absolute z-50 top-4 right-4 text-green-500 bg-green-500 text-2xl md:text-3xl"
+                                    className="absolute z-50 top-4 rounded-full right-4 text-white bg-green-500 text-2xl md:text-3xl"
                                 >
                                     <FaTimes />
                                 </button>
