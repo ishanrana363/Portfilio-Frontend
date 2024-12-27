@@ -10,9 +10,10 @@ import "swiper/css/navigation";
 import Loader from "../loder/Loder";
 import { TbBrandSketch } from "react-icons/tb";
 import BrandsSkeleton from "../skeleton/brands-skeleton";
+import Animation from "../../animation/Animation";
 
 const AllFeedback = () => {
-    const [loader,setLoader] = useState(false)
+    const [loader, setLoader] = useState(false)
     const { feedbackListApi, feedbackList } = feedbackStore();
 
     useEffect(() => {
@@ -28,45 +29,47 @@ const AllFeedback = () => {
         fetchFeedback();
     }, []);
 
-    if (feedbackList.length===0) {
-        return <BrandsSkeleton></BrandsSkeleton>  ;
+    if (feedbackList.length === 0) {
+        return <BrandsSkeleton></BrandsSkeleton>;
     }
 
     return (
-        <div className=" " >
-            <div className=" max-w-screen-xl mx-auto  " >
-            <div className="">
-            <h3 className="text-center text-gray-900 font-mono md:text-4xl py-4 md:py-10 font-bold md:mb-6">All Feedback</h3>
-            <Swiper
-                spaceBetween={20}
-                slidesPerView={1}
-                pagination={{ clickable: true }}
-                navigation
-                speed={1000}
-                autoplay={{ delay: 1000 }}
-                modules={[Pagination, Navigation, Autoplay]}
-                className="w-full relative"
-            >
-                {feedbackList.map((fb) => (
-                    <SwiperSlide
-                        key={fb.id}
-                        className="flex flex-col items-center justify-center md:p-4 h-[300px]" // Fixed height for uniformity
-                    >
-                        <img
-                            src={fb.img}
-                            alt={fb.name}
-                            className="mx-auto w-24 h-24 rounded-full object-cover" // Set fixed width and height
-                        />
-                        <div className="my-4 text-center">
-                            <p className="font-bold text-gray-900 text-[10px] md:text-xl">{fb.name}</p>
-                            <p className="text-gray-900 md:text-lg text-[8px] ">{fb.feedback}</p>
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-        </div>
-        </div>
-        </div>
+        <Animation>
+            <div className=" " >
+                <div className=" max-w-screen-xl mx-auto  " >
+                    <div className="">
+                        <h3 className="text-center text-gray-900 font-mono md:text-4xl py-4 md:py-10 font-bold md:mb-6">All Feedback</h3>
+                        <Swiper
+                            spaceBetween={20}
+                            slidesPerView={1}
+                            pagination={{ clickable: true }}
+                            navigation
+                            speed={1000}
+                            autoplay={{ delay: 1000 }}
+                            modules={[Pagination, Navigation, Autoplay]}
+                            className="w-full relative"
+                        >
+                            {feedbackList.map((fb) => (
+                                <SwiperSlide
+                                    key={fb._id}
+                                    className="flex flex-col items-center justify-center md:p-4 h-[300px]" // Fixed height for uniformity
+                                >
+                                    <img
+                                        src={fb.img}
+                                        alt={fb.name}
+                                        className="mx-auto w-24 h-24 rounded-full object-cover" // Set fixed width and height
+                                    />
+                                    <div className="my-4 text-center">
+                                        <p className="font-bold text-gray-900 text-[10px] md:text-xl">{fb.name}</p>
+                                        <p className="text-gray-900 md:text-lg text-[8px] ">{fb.feedback}</p>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+                </div>
+            </div>
+        </Animation>
     );
 };
 

@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { div } from 'framer-motion/client';
 import { Helmet } from 'react-helmet-async';
+import Animation from '../../animation/Animation';
 
 function StackOverFlow() {
     const [loader, setLoader] = useState(false);
@@ -41,74 +42,76 @@ function StackOverFlow() {
 
     return (
         <>
-            <Helmet>
-                <title>Portfolio || Stack Overflow Page</title>
-            </Helmet>
-            <div className='bg-gradient-to-br from-teal-400 via-sky-300 via-blue-200 to-purple-500 opacity-70 ' >
-                <div className="w-11/12 mx-auto">
-                    <div className="lg:ml-[60px] ml-3  font-bold">
-                        <div className="md:flex md:justify-end md:items-center md:space-x-4">
-                            <div className="md:w-1/4 w-full py-4 ">
-                                <label className="block text-sm font-medium "></label>
-                                <input
-                                    onChange={handleSubmit}
-                                    type="text"
-                                    placeholder="Enter stack name"
-                                    className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
-                                />
-                            </div>
-                            
-                        </div>
-                    </div>
+            <Animation>
+                <Helmet>
+                    <title>Portfolio || Stack Overflow Page</title>
+                </Helmet>
+                <div className='bg-gradient-to-br from-teal-400 via-sky-300 via-blue-200 to-purple-500 opacity-70 ' >
+                    <div className="w-11/12 mx-auto">
+                        <div className="lg:ml-[60px] ml-3  font-bold">
+                            <div className="md:flex md:justify-end md:items-center md:space-x-4">
+                                <div className="md:w-1/4 w-full py-4 ">
+                                    <label className="block text-sm font-medium "></label>
+                                    <input
+                                        onChange={handleSubmit}
+                                        type="text"
+                                        placeholder="Enter stack name"
+                                        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+                                    />
+                                </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-4 py-3 md:py-10 ">
-                        {
-                            overflowList && overflowList.map((item, i) => {
-                                return (
-                                    <div key={i} className="mt-5 md:mt-0  ">
-                                        <Link to={`/stack-details/${item._id}`}>
-                                            <div className="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 transform hover:scale-110">
-                                                <div className="p-4 h-52 overflow-hidden">
-                                                    <img
-                                                        className="object-cover w-full md:h-48 rounded-lg"
-                                                        src={item.img}
-                                                        alt={item.name}
-                                                    />
-                                                </div>
-                                                <div>
-                                                    <div className='ml-4 md:mt-4 mt-2'>
-                                                        <h2 className="md:text-xl text-[15px] font-bold text-gray-900">{item.categories}</h2>
-                                                        <p className="md:text-sm text-[9px] my-3 font-mono text-gray-900">
-                                                            {
-                                                                item?.name
-                                                            }
-                                                        </p>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-4 py-3 md:py-10 ">
+                            {
+                                overflowList && overflowList.map((item, i) => {
+                                    return (
+                                        <div key={i} className="mt-5 md:mt-0  ">
+                                            <Link to={`/stack-details/${item._id}`}>
+                                                <div className="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 transform hover:scale-110">
+                                                    <div className="p-4 h-52 overflow-hidden">
+                                                        <img
+                                                            className="object-cover w-full md:h-48 rounded-lg"
+                                                            src={item.img}
+                                                            alt={item.name}
+                                                        />
+                                                    </div>
+                                                    <div>
+                                                        <div className='ml-4 md:mt-4 mt-2'>
+                                                            <h2 className="md:text-xl text-[15px] font-bold text-gray-900">{item.categories}</h2>
+                                                            <p className="md:text-sm text-[9px] my-3 font-mono text-gray-900">
+                                                                {
+                                                                    item?.name
+                                                                }
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div className="md:p-4   overflow-hidden">
+                                                        <p className="md:text-lg text-[10px] ml-4 md:ml-0 text-justify font-mono text-gray-900">{item.description.slice(0, 20)}....</p>
+                                                    </div>
+                                                    <div className="ml-4 mb-3 md:p-4">
+                                                        <Link to={`/blog-details/${item._id}`} className="text-gray-900 md:text-[16px] text-[9px] font-bold">
+                                                            Read More
+                                                        </Link>
                                                     </div>
                                                 </div>
-                                                <div className="md:p-4   overflow-hidden">
-                                                    <p className="md:text-lg text-[10px] ml-4 md:ml-0 text-justify font-mono text-gray-900">{item.description.slice(0, 20)}....</p>
-                                                </div>
-                                                <div className="ml-4 mb-3 md:p-4">
-                                                    <Link to={`/blog-details/${item._id}`} className="text-gray-900 md:text-[16px] text-[9px] font-bold">
-                                                        Read More
-                                                    </Link>
-                                                </div>
-                                            </div>
-                                        </Link>
-                                    </div>
-                                );
-                            })
-                        }
+                                            </Link>
+                                        </div>
+                                    );
+                                })
+                            }
+                        </div>
                     </div>
                 </div>
-            </div>
-            {
-                loader && (
-                    <div className="">
-                        <BrandsSkeleton />
-                    </div>
-                )
-            }
+                {
+                    loader && (
+                        <div className="">
+                            <BrandsSkeleton />
+                        </div>
+                    )
+                }
+            </Animation>
         </>
     );
 }
