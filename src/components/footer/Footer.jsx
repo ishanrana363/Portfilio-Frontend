@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <Animation>
       <div className='bg-gradient-to-br from-emerald-500 via-teal-400 via-cyan-300 to-blue-500 shadow-md shadow-green-200 font-mono font-bold p-4 md:py-14 text-textSecondary'>
-        <div className='max-w-screen-xl mx-auto'>
-          <footer>
+        <div className=' w-11/12 mx-auto'>
+          <footer className='' >
             <div className='grid lg:grid-cols-4 md:grid text-center'>
 
               {/* Passion Section */}
@@ -42,14 +42,14 @@ const Footer = () => {
               </div>
 
               {/* Newsletter Section */}
-              <div>
-                <h1 className='md:text-2xl underline mt-2'>Newsletter</h1>
-                <ul className='md:my-4'>
-                  <li><NavLink className="md:text-lg text-[9px]" to="">Terms Of Use</NavLink></li>
-                  <li><NavLink className="md:text-lg text-[9px]" to="">Privacy Policy</NavLink></li>
-                  <li><NavLink className="md:text-lg text-[9px]" to="">Cookie Policy</NavLink></li>
-                </ul>
-              </div>
+                <div className='' >
+                  <h1 className='md:text-2xl underline mt-2'>Newsletter</h1>
+                  <ul className='md:my-4'>
+                    <li><NavLink className="md:text-lg text-[9px]" to="">Terms Of Use</NavLink></li>
+                    <li><NavLink className="md:text-lg text-[9px]" to="">Privacy Policy</NavLink></li>
+                    <li><NavLink className="md:text-lg text-[9px]" to="">Cookie Policy</NavLink></li>
+                  </ul>
+                </div>
             </div>
 
             {/* Footer Text */}

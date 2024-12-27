@@ -59,7 +59,7 @@ const Header = () => {
                     key={index}
                     src={logo.logo}
                     alt={logo.logoName}
-                    className="h-14 w-14"
+                    className="h-14 w-14 rounded-full "
                   />
                 ))
               }
