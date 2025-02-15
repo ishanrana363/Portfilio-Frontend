@@ -3,6 +3,7 @@ import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export default function LoginPage() {
     const [loading, setLoading] = useState(false);
@@ -27,7 +28,21 @@ export default function LoginPage() {
             console.log(res)
             setLoading(false)
             if (res.data.role === "admin") {
-                toast.success(`${res.data.role} login successfully!`);
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                });
+                Toast.fire({
+                    icon: "success",
+                    title: `${res.data.role} login successfully`
+                });
                 navigate("/admin-dashboard");
                 setToken(res);
                 setRole(res)
@@ -37,7 +52,21 @@ export default function LoginPage() {
                 setRole(res)
                 navigate("/");
                 e.target.reset();
-                toast.success(`${res.data.role} login successfully!`);
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                });
+                Toast.fire({
+                    icon: "success",
+                    title: `${res.data.role} login successfully`
+                });
                 return;
             }
         } catch (error) {

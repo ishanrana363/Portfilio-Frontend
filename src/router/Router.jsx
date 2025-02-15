@@ -19,89 +19,100 @@ import BlogDetailsPage from "../pages/blog-page/BlogDetailsPage";
 import StackOverFlow from "../pages/stack-over-page/StackOverFlow";
 import StackDetails from "../pages/stack-over-page/StackDetails";
 import LoginPage from "../components/login/LoginPage";
+import AdminLayout from "../layout/AdminLayout";
 
 export const router = createBrowserRouter([
     {
         path: "/",
-        element : <MainLayout></MainLayout>,
+        element: <MainLayout></MainLayout>,
         children: [
             {
-                path : "/",
-                element : <HomePage></HomePage>
+                path: "/",
+                element: <HomePage></HomePage>
             },
             {
-                path : "about",
-                element : <AboutPage></AboutPage>
+                path: "about",
+                element: <AboutPage></AboutPage>
             },
             {
-                path : "skill",
-                element : <SkillPage></SkillPage>
+                path: "skill",
+                element: <SkillPage></SkillPage>
             },
             {
-                path : "service",
-                element : <ServicePage></ServicePage>
+                path: "service",
+                element: <ServicePage></ServicePage>
             },
             {
-                path : "project",
-                element : <ProjectPage></ProjectPage>
+                path: "project",
+                element: <ProjectPage></ProjectPage>
             },
             {
-                path:"blog",
-                element : <BlogPage></BlogPage>
+                path: "blog",
+                element: <BlogPage></BlogPage>
             },
             {
-                path : "contact",
-                element : <ContactPage></ContactPage>
+                path: "contact",
+                element: <ContactPage></ContactPage>
             },
             {
-                path : "/disclaimer",
-                element : <DisclaimerPage></DisclaimerPage>
+                path: "/disclaimer",
+                element: <DisclaimerPage></DisclaimerPage>
             },
             {
-                path : "/intectual",
-                element : <IntellectualPage></IntellectualPage>
+                path: "/intectual",
+                element: <IntellectualPage></IntellectualPage>
             },
             {
-                path : "/data-privacy",
-                element : <DataPrivacyPage></DataPrivacyPage>
+                path: "/data-privacy",
+                element: <DataPrivacyPage></DataPrivacyPage>
             },
             {
-                path : "/limatation",
-                element : <LimitationsPage></LimitationsPage>
+                path: "/limatation",
+                element: <LimitationsPage></LimitationsPage>
             },
             {
-                path : "/web-design",
-                element : <WebDesign></WebDesign>
+                path: "/web-design",
+                element: <WebDesign></WebDesign>
             },
             {
-                path :"/web-development",
-                element : <WebDevelopment></WebDevelopment>
+                path: "/web-development",
+                element: <WebDevelopment></WebDevelopment>
             },
             {
-                path : "/e-commerce",
-                element : <ECommerce></ECommerce>
+                path: "/e-commerce",
+                element: <ECommerce></ECommerce>
             },
             {
-                path : "/backend-development",
-                element : <BackendDevelopment></BackendDevelopment>
+                path: "/backend-development",
+                element: <BackendDevelopment></BackendDevelopment>
             },
             {
-                path : "/blog-details/:id",
-                element : <BlogDetailsPage></BlogDetailsPage> // Replace "id" with the actual blog post ID
+                path: "/blog-details/:id",
+                element: <BlogDetailsPage></BlogDetailsPage> // Replace "id" with the actual blog post ID
             },
             {
-                path : "/stack-overflow",
-                element : <StackOverFlow></StackOverFlow> // Replace "StackOverflowPage" with the actual page component for Stack Overflow
+                path: "/stack-overflow",
+                element: <StackOverFlow></StackOverFlow> // Replace "StackOverflowPage" with the actual page component for Stack Overflow
             },
             {
-                path : "/stack-details/:id",
-                element : <StackDetails></StackDetails>
+                path: "/stack-details/:id",
+                element: <StackDetails></StackDetails>
             }
 
         ]
     },
     {
-        path : "/login",
-        element : <LoginPage></LoginPage>
+        path: "/login",
+        element: <LoginPage></LoginPage>
+    },
+    {
+        path: "/admin-dashboard",
+        element: <AdminLayout></AdminLayout>,
+        children: [
+            {
+                path : "",
+                element : <div>home page</div>
+            }
+        ]
     }
 ]);
