@@ -18,6 +18,7 @@ import BackendDevelopment from "../pages/web-design-page/BackendDevelopment";
 import BlogDetailsPage from "../pages/blog-page/BlogDetailsPage";
 import StackOverFlow from "../pages/stack-over-page/StackOverFlow";
 import StackDetails from "../pages/stack-over-page/StackDetails";
+import LoginPage from "../components/login/LoginPage";
 
 export const router = createBrowserRouter([
     {
@@ -98,5 +99,9 @@ export const router = createBrowserRouter([
             }
 
         ]
+    },
+    {
+        path : "/login",
+        element : <LoginPage></LoginPage>
     }
 ]);
